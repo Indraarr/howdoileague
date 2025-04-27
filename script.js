@@ -2,8 +2,9 @@ let textbox = document.getElementById("searchtext");
 
 let lastSeen;
 
-
+// TEXTBOX FUNCTIONALITY
 textbox.addEventListener("input", check);
+
 
 const champions = [
     "aatrox", "ahri", "akali", "akshan", "alistar", "amara", "amumu", "anivia", "annie", "aphelios",
@@ -30,30 +31,46 @@ const champions = [
 function check() {
     let text = textbox.value.toLowerCase();
 
+    if (textbox.value == "") {
+        disappear(lastSeen);
+    }
+
     if (champions.includes(text)) {
         let champion = document.getElementById(`${text}`);
+        if (lastSeen) {
+            disappear(lastSeen);
+        }
         appear(champion);
         lastSeen = champion;
     }
 
-    if (textbox.value == "") {
-        disappear(lastSeen);
-    }
+    
 
 
 }
 
 
 function appear(champion) {
-    champion.style.display = "flex";
+    champion.style.height = "1000px";
+    champion.style.transition = "height 0.5s ease 0.2s"
 }
 
 
 function disappear(champion) {
-    champion.style.display = "none";
+    champion.style.height = "0px";
+    champion.style.transition = "height 0.2s";
 }
 
+// IMAGE FUNCTIONALITY
 
+const images = document.querySelectorAll('.champ-icon');
+
+images.forEach(image => {
+    image.addEventListener("click", (e) => {
+        textbox.value = e.target.alt;
+        check();
+    })
+})
 
 
 

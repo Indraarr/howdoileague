@@ -67,8 +67,8 @@ body {
 /* ICONS */
 
 #icons-container {
-    height: 300px;
-    min-height: 300px;
+    height: 500px;
+    min-height: 500px;
     background: #1759638e;
     display: flex;
     justify-content: center;
@@ -90,21 +90,32 @@ body {
     width: 40px;
     height: 40px;
     background: #fff;
-    border-radius: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#icon-box > img:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+#icon-box > img:active {
+    scale: 1.2;
 }
 
 /* CHAMPION DETAILS */
 
 .detail-container {
     width: 100%;
-    height: fit-content;
+    height: 0px;
     background: #bbb;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
 
-    display: none;
+    
 
 }
 
