@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background: #092529;
+    background: #0d181f;
     
 }
 
@@ -177,7 +177,6 @@ h1 {
 ul {
     width: 100%;
     padding-left: 20px;
-    list-style-position: inside;
     line-height: 3rem;
 }
 
