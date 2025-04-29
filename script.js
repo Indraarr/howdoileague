@@ -8,8 +8,8 @@ textbox.addEventListener("input", check);
 
 const champions = [
     "aatrox", "ahri", "akali", "akshan", "alistar", "ambessa", "amumu", "anivia", "annie", "aphelios",
-    "ashe", "aurelion sol", "aurora", "azir", "bard", "belveth", "blitzcrank", "brand", "braum", "briar",
-    "caitlyn", "camille", "cassiopeia", "chogath", "corki", "darius", "diana", "dr. mundo", "draven",
+    "ashe", "aurelionsol", "aurora", "azir", "bard", "belveth", "blitzcrank", "brand", "braum", "briar",
+    "caitlyn", "camille", "cassiopeia", "chogath", "corki", "darius", "diana", "drmundo", "draven",
     "ekko", "elise", "evelynn", "ezreal", "fiddlesticks", "fiora", "fizz", "galio", "gangplank",
     "garen", "gnar", "gragas", "graves", "gwen", "hecarim", "heimerdinger", "hwei", "illaoi", "irelia",
     "ivern", "janna", "jarvan iv", "jax", "jayce", "jhin", "jinx", "ksante", "kai'sa", "kalista",
@@ -29,7 +29,7 @@ const champions = [
 
 
 function check() {
-    let text = textbox.value.toLowerCase().replaceAll("'", "").replaceAll(" ","");
+    let text = textbox.value.toLowerCase().replaceAll("'", "").replaceAll(" ","").replaceAll(".", "");
 
     if (textbox.value == "") {
         disappear(lastSeen);
