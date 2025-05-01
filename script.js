@@ -1,5 +1,5 @@
 let textbox = document.getElementById("searchtext");
-let iconbox = document.getElementById("icon-box");
+let divider = document.getElementById("divider");
 let lastSeen;
 
 // TEXTBOX FUNCTIONALITY
@@ -61,18 +61,18 @@ function check() {
 
 
 function appear(champion) {
-    champion.style.height = "1500px";
+    champion.style.height = champion.scrollHeight + "px";
     champion.style.transition = "height 0.5s ease 0.2s";
-    iconbox.style.borderBottomWidth = "1px";
-    iconbox.style.transition = "border-bottom-width 0.5s ease 0.2s";
+    divider.style.borderBottomWidth = "1px";
+    divider.style.transition = "border-bottom-width 0.5s ease 0.2s";
 }
 
 
 function disappear(champion) {
     champion.style.height = "0px";
     champion.style.transition = "height 0.2s";
-    iconbox.style.borderBottomWidth = "0px";
-    iconbox.style.transition = "border-bottom-width 0.1s";
+    divider.style.borderBottomWidth = "0px";
+    divider.style.transition = "border-bottom-width 0.1s";
 }
 
 // IMAGE FUNCTIONALITY
