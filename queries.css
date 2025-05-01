@@ -1,0 +1,14 @@
+@media (max-width: 600px) {
+    #icons-container {
+        display: none;
+    }
+
+    #search-container {
+        background: #091116;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0px;
+    }
+}

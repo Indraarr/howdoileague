@@ -153,8 +153,9 @@ body {
 }
 
 .segment {
-    border-width: 1px;;
+    border-width: 1px;
     width: 60%;
+    min-width: 400px;
     height: fit-content;
     display: flex;
     flex-direction: column;
