@@ -86,10 +86,11 @@ body {
 /* ICONS */
 
 #icons-container {
-    height: 500px;
+    height: fit-content;
     min-height: 500px;
     display: flex;
     justify-content: center;
+    align-items: center;
     overflow:hidden;
 
     background: #091116;
@@ -98,6 +99,7 @@ body {
 #icon-box {
     height: 100%;
     width: 60%;
+    min-width: 400px;
     display: flex;
     justify-content: flex-start;
     gap: 10px;
@@ -105,6 +107,8 @@ body {
     flex-wrap: wrap;
     border-bottom: 1px solid rgb(100, 100, 100);
     border-bottom-width: 0px;
+
+    /* flex-shrink: 0; */
 }
 
 .champ-icon {
