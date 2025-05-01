@@ -1,5 +1,5 @@
 let textbox = document.getElementById("searchtext");
-
+let iconbox = document.getElementById("icon-box");
 let lastSeen;
 
 // TEXTBOX FUNCTIONALITY
@@ -12,18 +12,18 @@ const champions = [
     "caitlyn", "camille", "cassiopeia", "chogath", "corki", "darius", "diana", "drmundo", "draven",
     "ekko", "elise", "evelynn", "ezreal", "fiddlesticks", "fiora", "fizz", "galio", "gangplank",
     "garen", "gnar", "gragas", "graves", "gwen", "hecarim", "heimerdinger", "hwei", "illaoi", "irelia",
-    "ivern", "janna", "jarvan iv", "jax", "jayce", "jhin", "jinx", "ksante", "kai'sa", "kalista",
+    "ivern", "janna", "jarvaniv", "jax", "jayce", "jhin", "jinx", "ksante", "kaisa", "kalista",
     "karma", "karthus", "kassadin", "katarina", "kayle", "kayn", "kennen", "khazix", "kindred",
     "kled", "kogmaw", "leblanc", "leesin", "leona", "lillia", "lissandra", "lucian", "lulu",
-    "lux", "malphite", "malzahar", "maokai", "milio", "miss fortune", "mordekaiser", "morgana",
+    "lux", "malphite", "malzahar", "maokai", "masteryi", "milio", "mel", "missfortune", "mordekaiser", "morgana",
     "naafiri", "nami", "nasus", "nautilus", "neeko", "nidalee", "nilah", "nocturne", "nunu",
     "olaf", "orianna", "ornn", "pantheon", "poppy", "pyke", "qiyana", "quinn", "rakan", "rammus",
-    "reksai", "rell", "renata", "renekton", "rengar", "riven", "rumble", "ryze", "samira",
+    "reksai", "rell", "renataglasc", "renekton", "rengar", "riven", "rumble", "ryze", "samira",
     "sejuani", "senna", "seraphine", "sett", "shaco", "shen", "shyvana", "singed", "sion", "sivir",
-    "skarner", "sona", "soraka", "swain", "sylas", "syndra", "tahmkench", "taliyah", "talon",
+    "skarner", "smolder", "sona", "soraka", "swain", "sylas", "syndra", "tahmkench", "taliyah", "talon",
     "taric", "teemo", "thresh", "tristana", "trundle", "tryndamere", "twistedfate", "twitch",
     "udyr", "urgot", "varus", "vayne", "veigar", "velkoz", "vex", "vi", "viego", "viktor", "vladimir",
-    "volibear", "warwick", "wukong", "xerath", "xayah", "xinzhao", "yasuo", "yone", "yorick", "yuumi",
+    "volibear", "warwick", "wukong", "xerath", "xayah", "xinzhao", "yasuo", "yone", "yorick", "yunara", "yuumi",
     "zac", "zed", "zeri", "ziggs", "zilean", "zoe", "zyra"
   ];
 
@@ -35,6 +35,18 @@ function check() {
         disappear(lastSeen);
     }
 
+    if (text.includes("jarvan")) {
+        text = "jarvaniv";
+    }
+
+    if (text.includes("nunu")) {
+        text = "nunu";
+    }
+
+    if (text.includes("renata")) {
+        text = "renataglasc";
+    }
+ 
     if (champions.includes(text)) {
         let champion = document.getElementById(`${text}`);
         if (lastSeen) {
@@ -44,21 +56,23 @@ function check() {
         lastSeen = champion;
     }
 
-    
-
 
 }
 
 
 function appear(champion) {
     champion.style.height = "1500px";
-    champion.style.transition = "height 0.5s ease 0.2s"
+    champion.style.transition = "height 0.5s ease 0.2s";
+    iconbox.style.borderBottomWidth = "1px";
+    iconbox.style.transition = "border-bottom-width 0.5s ease 0.2s";
 }
 
 
 function disappear(champion) {
     champion.style.height = "0px";
     champion.style.transition = "height 0.2s";
+    iconbox.style.borderBottomWidth = "0px";
+    iconbox.style.transition = "border-bottom-width 0.1s";
 }
 
 // IMAGE FUNCTIONALITY

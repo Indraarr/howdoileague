@@ -92,7 +92,7 @@ body {
     justify-content: center;
     overflow:hidden;
 
-    /* background: #1759638e; */
+    background: #091116;
 }
 
 #icon-box {
@@ -103,8 +103,8 @@ body {
     gap: 10px;
     padding: 20px;
     flex-wrap: wrap;
-
-    /* background: green; */
+    border-bottom: 1px solid rgb(100, 100, 100);
+    border-bottom-width: 0px;
 }
 
 .champ-icon {
@@ -192,6 +192,24 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: darkred;
 }
 
+#links > div {
+    font-weight: 700;
+}
+
+#reference {
+    font-weight: 400;
+    color: white;
+}
+
+#reference:hover{
+    color: #0097cf;
+}
+
+
+/* TEMPORARY */
+
+#temp-pic {
+    width: 200px;
+}
